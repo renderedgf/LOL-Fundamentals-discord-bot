@@ -1,0 +1,26 @@
+{
+  "name": "discord-bot",
+  "version": "0.1.0",
+  "description": "Mechanical receptionist",
+  "main": "dist/index.js",
+  "repository": "https://github.com/LoL-Fundamentals-Tech/discord-bot",
+  "author": "yuni <haskellchan@gmail.com>",
+  "license": "BSD-3",
+  "private": true,
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "lint": "node_modules/.bin/eslint src --ext .ts",
+    "prettier": "node_modules/.bin/prettier --write src",
+    "stage": "npm run lint && npm run compile"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
+}
