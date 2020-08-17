@@ -1,4 +1,4 @@
-import ty from 'schemas/common/typeLabels'
+import ty from '=schemas/common/typeLabels'
 
 export default {
     ...ty.obj(),

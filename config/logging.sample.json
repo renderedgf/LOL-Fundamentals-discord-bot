@@ -1,0 +1,6 @@
+{
+  "collect": {
+    "stdout": false,
+    "stderr": true
+  }
+}

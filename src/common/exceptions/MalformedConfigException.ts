@@ -1,3 +1,5 @@
 import ConfigException from './ConfigException'
 
-export default class MalformedConfigException extends ConfigException {}
+export default class MalformedConfigException extends ConfigException {
+    name = 'MalformedConfigException'
+}

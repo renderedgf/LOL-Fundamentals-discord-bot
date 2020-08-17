@@ -1,13 +1,13 @@
 import * as path from 'path'
 
-import fs from 'common/async/fs'
+import fs from '@app/common/async/fs'
 
-import InvalidStateException from 'common/exceptions/InvalidStateException'
-import MalformedConfigException from 'common/exceptions/MalformedConfigException'
-import MissingConfigException from 'common/exceptions/MissingConfigException'
-import SchemaValidator from 'util/SchemaValidator'
-import authSchema from 'schemas/config/auth'
-import loggingSchema from 'schemas/config/logging'
+import InvalidStateException from '=common/exceptions/InvalidStateException'
+import MalformedConfigException from '=common/exceptions/MalformedConfigException'
+import MissingConfigException from '=common/exceptions/MissingConfigException'
+import SchemaValidator from '=util/SchemaValidator'
+import authSchema from '=schemas/config/auth'
+import loggingSchema from '=schemas/config/logging'
 
 export interface AuthConfig {
     token: string
@@ -56,6 +56,10 @@ export default class ConfigSvc {
 
             throw e
         }
+    }
+
+    static get initialized(): boolean {
+        return this._initialized
     }
 
     static async init(): Promise<void> {
